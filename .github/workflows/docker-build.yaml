@@ -9,9 +9,9 @@ jobs:
        matrix:
          platform: [linux/amd64, linux/arm64]
     steps:
-      - uses: actions/checkout@v2
-      - name: Build image
-        uses: |
+    - uses: actions/checkout@v2
+    - name: Build image
+        uses:|
           docker build -t python-helloworld .
           docker tag python-helloworld python-helloworld:latest
           docker push mwess89/python-helloworld:latest
